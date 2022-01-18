@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+	--text-color: #c6c9d2;
+	--heading-color: #fff;
+	--bg-color: #1f222e;
+	--primary-color: #4a63e2;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	font-family: 'Inter', sans-serif;
+}
+
+.container {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 30px;
+}
+
+.btn {
+	display: inline-block;
+	text-decoration: none;
+	padding: 10px 15px;
+	border-radius: 5px;
+	cursor: pointer;
+	border: none;
+}
+
+.btn:focus {
+	outline: none;
+}
+
+.btn-primary {
+	background-color: var(--primary-color);
+	color: var(--heading-color);
+}
+
+/* Register and Login Page */
+.register-login {
+	width: 400px;
+	background-color: #2d3343;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+	padding: 30px 40px;
+}
+
+.register-login h2 {
+	margin-bottom: 20px;
+	color: var(--heading-color);
+}
+
+.register-login .form-control {
+	margin-bottom: 15px;
+	color: var(--text-color);
+}
+
+.register-login .form-control input {
+	width: 100%;
+	margin-top: 10px;
+	padding: 10px;
+	border: 0;
+	border-radius: 5px;
+	background-color: #999;
+	font-family: 'Inter', sans-serif;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+
+.register-login .form-control input:focus {
+	outline: none;
+}
+
+.register-login button {
+	font-size: 16px;
+	font-family: 'Inter', sans-serif;
+	color: var(--heading-color);
+	margin-bottom: 20px;
+}
+
+.register-login a {
+	color: var(--primary-color);
+	margin-left: 10px;
+	font-weight: 500;
+}
