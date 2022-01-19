@@ -9,3 +9,10 @@ export async function get() {
 		body: await posts.json()
 	};
 }
+
+export async function post({ params }) {
+	return {
+		status: 201,
+		body: {}
+	};
+}
