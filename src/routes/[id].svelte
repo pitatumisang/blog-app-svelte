@@ -1,13 +1,13 @@
 <script context="module">
-	import BASE_URL from '$lib/baseUrl.js';
-
 	export async function load({ params, fetch }) {
 		const res = await fetch(`/api/posts/${params.id}`);
 
-		if (res.ok) {
+		const data = await res.json();
+
+		if (data.success === true) {
 			return {
 				props: {
-					reponse: await res.json()
+					reponse: data
 				}
 			};
 		}

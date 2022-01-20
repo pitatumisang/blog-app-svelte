@@ -1,12 +1,13 @@
 import BASE_URL from '$lib/baseUrl.js';
+import axios from 'axios';
 
 export const get = async ({ params }) => {
 	const { id } = params;
 
-	const response = await fetch(`${BASE_URL}/posts/${id}`);
+	const res = await axios(`${BASE_URL}/posts/${id}`);
 
 	return {
-		status: 200,
-		body: await response.json()
+		status: res.status,
+		body: res.data
 	};
 };

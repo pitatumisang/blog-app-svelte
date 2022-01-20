@@ -1,11 +1,15 @@
 <script context="module">
-	export const load = async ({ params, url, fetch, session, context }) => {
+	import axios from 'axios';
+
+	export const load = async ({ fetch }) => {
 		const res = await fetch('/api/posts');
 
-		if (res.ok) {
+		const data = await res.json();
+
+		if (data.success === true) {
 			return {
 				props: {
-					response: await res.json()
+					response: data
 				}
 			};
 		}
